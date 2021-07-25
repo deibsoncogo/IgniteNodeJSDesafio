@@ -1,14 +1,14 @@
 const { v4 } = require("uuid");
 const {
   users,
-  checksTodoExists,
+  ChecksTodoExists,
 } = require("../..");
 
 let response;
 let request;
 let mockNext;
 
-describe("checksTodoExists", () => {
+describe("ChecksTodoExists", () => {
   beforeEach(() => {
     users.splice(0, users.length);
 
@@ -63,7 +63,7 @@ describe("checksTodoExists", () => {
 
     const mockResponse = response();
 
-    checksTodoExists(mockRequest, mockResponse, mockNext);
+    ChecksTodoExists(mockRequest, mockResponse, mockNext);
 
     expect(mockTodoSetter).toBeCalledWith(
       expect.objectContaining({ ...todo }),
@@ -99,7 +99,7 @@ describe("checksTodoExists", () => {
 
     const mockResponse = response();
 
-    checksTodoExists(mockRequest, mockResponse, mockNext);
+    ChecksTodoExists(mockRequest, mockResponse, mockNext);
 
     expect(mockResponse.status).toBeCalledWith(404);
 
@@ -131,7 +131,7 @@ describe("checksTodoExists", () => {
 
     const mockResponse = response();
 
-    checksTodoExists(mockRequest, mockResponse, mockNext);
+    ChecksTodoExists(mockRequest, mockResponse, mockNext);
 
     expect(mockResponse.status).toBeCalledWith(400);
 
@@ -163,7 +163,7 @@ describe("checksTodoExists", () => {
 
     const mockResponse = response();
 
-    checksTodoExists(mockRequest, mockResponse, mockNext);
+    ChecksTodoExists(mockRequest, mockResponse, mockNext);
 
     expect(mockResponse.status).toBeCalledWith(404);
 

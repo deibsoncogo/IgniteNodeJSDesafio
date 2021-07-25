@@ -1,14 +1,14 @@
 const { v4 } = require("uuid");
 const {
   users,
-  checksCreateTodosUserAvailability,
+  ChecksCreateTodosUserAvailability,
 } = require("../..");
 
 let response;
 let request;
 let mockNext;
 
-describe("checksCreateTodosUserAvailability", () => {
+describe("ChecksCreateTodosUserAvailability", () => {
   beforeEach(() => {
     users.splice(0, users.length);
 
@@ -46,7 +46,7 @@ describe("checksCreateTodosUserAvailability", () => {
 
     const mockResponse = response();
 
-    checksCreateTodosUserAvailability(mockRequest, mockResponse, mockNext);
+    ChecksCreateTodosUserAvailability(mockRequest, mockResponse, mockNext);
 
     expect(mockNext).toBeCalled();
   });
@@ -70,7 +70,7 @@ describe("checksCreateTodosUserAvailability", () => {
 
     const mockResponse = response();
 
-    checksCreateTodosUserAvailability(mockRequest, mockResponse, mockNext);
+    ChecksCreateTodosUserAvailability(mockRequest, mockResponse, mockNext);
 
     expect(mockResponse.status).toBeCalledWith(403);
   });
@@ -94,7 +94,7 @@ describe("checksCreateTodosUserAvailability", () => {
 
     const mockResponse = response();
 
-    checksCreateTodosUserAvailability(mockRequest, mockResponse, mockNext);
+    ChecksCreateTodosUserAvailability(mockRequest, mockResponse, mockNext);
 
     expect(mockNext).toBeCalled();
   });

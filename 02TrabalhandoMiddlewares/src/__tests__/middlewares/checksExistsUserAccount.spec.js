@@ -1,14 +1,14 @@
 const { v4 } = require("uuid");
 const {
   users,
-  checksExistsUserAccount,
+  ChecksExistsUserAccount,
 } = require("../..");
 
 let response;
 let request;
 let mockNext;
 
-describe("checksExistsUserAccount", () => {
+describe("ChecksExistsUserAccount", () => {
   beforeEach(() => {
     users.splice(0, users.length);
 
@@ -49,7 +49,7 @@ describe("checksExistsUserAccount", () => {
 
     const mockResponse = response();
 
-    checksExistsUserAccount(mockRequest, mockResponse, mockNext);
+    ChecksExistsUserAccount(mockRequest, mockResponse, mockNext);
 
     expect(mockNext).toBeCalled();
     expect(mockUserSetter).toBeCalledWith(
@@ -64,7 +64,7 @@ describe("checksExistsUserAccount", () => {
     const mockRequest = request({ headers: { username: "non-existing-username" } });
     const mockResponse = response();
 
-    checksExistsUserAccount(mockRequest, mockResponse, mockNext);
+    ChecksExistsUserAccount(mockRequest, mockResponse, mockNext);
 
     expect(mockResponse.status).toBeCalledWith(404);
   });

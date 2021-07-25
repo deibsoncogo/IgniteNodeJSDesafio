@@ -1,14 +1,14 @@
 const { v4 } = require("uuid");
 const {
   users,
-  findUserById,
+  FindUserById,
 } = require("../..");
 
 let response;
 let request;
 let mockNext;
 
-describe("findUserById", () => {
+describe("FindUserById", () => {
   beforeEach(() => {
     users.splice(0, users.length);
 
@@ -50,7 +50,7 @@ describe("findUserById", () => {
 
     const mockResponse = response();
 
-    findUserById(mockRequest, mockResponse, mockNext);
+    FindUserById(mockRequest, mockResponse, mockNext);
 
     expect(mockUserSetter).toBeCalledWith(
       expect.objectContaining(user),
@@ -65,7 +65,7 @@ describe("findUserById", () => {
 
     const mockResponse = response();
 
-    findUserById(mockRequest, mockResponse, mockNext);
+    FindUserById(mockRequest, mockResponse, mockNext);
 
     expect(mockResponse.status).toBeCalledWith(404);
 
