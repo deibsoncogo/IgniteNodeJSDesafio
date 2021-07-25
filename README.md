@@ -10,3 +10,7 @@ Ele consiste na criação de um usuário com tarefas que pode ser editada, exclu
 ### SubDesafio A - Trabalhando com middlewares
 Nesse desafio você irá trabalhar mais a fundo com middlewares no Express, dessa forma você será capaz de fixar mais ainda os conhecimentos obtidos até agora
 Para remover a repetição de comandos foi aplicado alguns middlewares
+
+### SubDesafio B - Corrigindo o código
+Nesse desafio, temos uma aplicação Node JS que está em processo de desenvolvimento mas que já possui os testes necessários para fazer toda a validação dos requisitos
+Aqui pegamos uma aplicação com vários problemas e realizei a correção dele
