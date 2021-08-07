@@ -14,3 +14,7 @@ Para remover a repetição de comandos foi aplicado alguns middlewares
 ### SubDesafio B - Corrigindo o código
 Nesse desafio, temos uma aplicação Node JS que está em processo de desenvolvimento mas que já possui os testes necessários para fazer toda a validação dos requisitos
 Aqui pegamos uma aplicação com vários problemas e realizei a correção dele
+
+## Desafio 02 - Introdução ao SOLID
+Nesse desafio, você irá criar uma API seguindo a estrutura de arquitetura limpa aprendida até agora
+Diferente do desafio 1 foi realmente a aplicação do SOLID criando diversos arquivos para assim conseguirmos separar as responsabilidade mais confesso que neste modo se tornar mais difícil
