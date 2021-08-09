@@ -18,3 +18,7 @@ Aqui pegamos uma aplicação com vários problemas e realizei a correção dele
 ## Desafio 02 - Introdução ao SOLID
 Nesse desafio, você irá criar uma API seguindo a estrutura de arquitetura limpa aprendida até agora
 Diferente do desafio 1 foi realmente a aplicação do SOLID criando diversos arquivos para assim conseguirmos separar as responsabilidade mais confesso que neste modo se tornar mais difícil
+
+### SubDesafio A - Documentando com Swagger
+Nesse desafio, você irá criar documentar, com o Swagger, a API desenvolvida no desafio anterior
+Foi criado uma documentação que explica como funciona a aplicação

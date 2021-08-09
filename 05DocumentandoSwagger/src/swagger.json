@@ -1,0 +1,103 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Atlas",
+    "description": "Essa é uma documentação a Atlas API",
+    "version": "1.0.0",
+    "contact": { "email": "deibsoncogo@outlook.com" }
+  },
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": ["users"],
+        "summary": "Criar usuário",
+        "description": "Rota responsável por criar um novo usuário",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": { "name": { "type": "string" }, "email": { "type": "string" }},
+                "example": { "name": "Ignite da Rocketseat", "email": "nodejs@rocketseat.com.br" }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": { "description": "Já existe um usuário com este email!" },
+          "201": { "description": "Usuário criado" }
+        }
+      },
+      "get": {
+        "tags": ["users"],
+        "summary": "Listar os usuários",
+        "description": "Rota responsável por mostrar todos os usuários criado a partir de um usuário administrador",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "userId",
+            "description": "Nome do produto",
+            "required": false
+          }
+        ],
+        "responses": {
+          "400": { "description": "Não existe um usuário com este ID!/O usuário não é um administrador!"},
+          "200": { "description": "Usuários cadastrado"}
+        }
+      }
+    },
+    "/users/{userId}/admin": {
+      "patch": {
+        "tags": ["users"],
+        "summary": "Tornar administrado",
+        "description": "Rota responsável por transforma um usuário em administrador",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "ID do usuário",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": { "description": "Não existe um usuário com este ID!" },
+          "200": { "description": "Usuário agora é um administrador" }
+        }
+      }
+    },
+    "/users/{userId}": {
+      "get": {
+        "tags": ["users"],
+        "summary": "Buscar usuário",
+        "description": "Rota responsável por buscar as informações de um usuário",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "ID do usuário",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": { "description": "Não existe um usuário com este ID!" },
+          "200": { "description": "Usuário encontrado" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "user": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "admin": { "type": "boolean" },
+          "name": { "type": "string" },
+          "email": { "type": "string" },
+          "createdAt": { "type": "date" },
+          "updatedAt": { "type": "date" }
+        }
+      }
+    }
+  }
+}
