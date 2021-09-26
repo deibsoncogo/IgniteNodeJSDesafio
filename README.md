@@ -25,3 +25,6 @@ Foi criado uma documentação que explica como funciona a aplicação
 
 ## Desafio 03 - Database Queries
 Nesse desafio você irá treinar os três tipos de queries usando do TypeORM com ORM, usando query builder e raw query
+
+### SubDesafio A - Modelagem do banco de dados
+Nesse desafio você irá praticar um pouco da modelagem de banco de dados, partindo da aplicação desenvolvida no desafio anterior
