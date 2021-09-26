@@ -22,3 +22,6 @@ Diferente do desafio 1 foi realmente a aplicação do SOLID criando diversos arq
 ### SubDesafio A - Documentando com Swagger
 Nesse desafio, você irá criar documentar, com o Swagger, a API desenvolvida no desafio anterior
 Foi criado uma documentação que explica como funciona a aplicação
+
+## Desafio 03 - Database Queries
+Nesse desafio você irá treinar os três tipos de queries usando do TypeORM com ORM, usando query builder e raw query
